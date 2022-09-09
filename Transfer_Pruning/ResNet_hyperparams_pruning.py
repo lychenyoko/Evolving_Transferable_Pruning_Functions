@@ -3,7 +3,7 @@ IMAGE_PIXELS = 32
 IMAGE_CHANNEL = 3
 OPTIMIZER_NAME = ['Nestrov_Momentum','Adam','Momentum']
 BLOCK_TYPE = ['Normal', 'BottleNeck']
-DISCRIMINANT_FUNC_LIST = ['DI','AbsSNR', 'SymDiv', 'TwoT', 'FDR', 'Random']
+# DISCRIMINANT_FUNC_LIST = ['DI','AbsSNR', 'SymDiv', 'TwoT', 'FDR', 'Random']
 DATASET_NAME = ['CIFAR10', 'CIFAR100']
 PRUNING_MODE = ['Uniform', 'Predefined','Automatic_Ratio','Automatic_FLOPs']
 
@@ -27,8 +27,8 @@ ResNet110_Full_Shape = [
 ### ------------------------------- Training Params -------------------------------
 
 # Network Structure and Dataset
-Dataset = DATASET_NAME[0]
-n_res_block = 18
+Dataset = DATASET_NAME[1]
+n_res_block = 9
 block_type = BLOCK_TYPE[0]
 
 # Epoch num and batch size
@@ -51,10 +51,10 @@ bn_var_epsilon = 1e-5
 
 # Loaded from other model
 model_loaded = True
-model = './Model_ResNet110/ResNet110_2019-08-22_04:47:52_acc_94.41_FLOP_100.0_Param_99.67/ResNet110_2019-08-22_04:47:52_acc_94.41_FLOP_100.0_Param_99.67.npy'
+model = None
 
 ### ------------------------------- Pruning Params -------------------------------
-Pfunc = 'SymDiv'
+Pfunc = 'GA_Func2'
 pruning_mode = PRUNING_MODE[0]
 prune_ratio = 0.4
 num_rmve_lay = 40
@@ -63,7 +63,7 @@ prune_multiple = 0.8
 MMD_Scoring_Sample = 2000
 is_balanced_sampling = True
 
-full_network_shape = ResNet110_Full_Shape
+full_network_shape = ResNet_56_Full_Shape
 pre_rmve_list = [
     [[6, 5], [0, 4], [11, 10], [8, 8], [8, 10], [15, 15], [6, 1], [7, 0], [7, 11]],
     [[4, 8], [22, 28], [8, 24], [30, 30], [18, 30], [30, 30], [8, 4], [10, 12], [12, 14]],

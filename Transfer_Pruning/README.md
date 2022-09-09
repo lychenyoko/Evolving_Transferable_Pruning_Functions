@@ -12,3 +12,15 @@ python3 model_training.py
 
 This experiment is fully controlled by the hyper-parameters specified in the file [ResNet_hyperparams_training.py](./ResNet_hyperparams_training.py). 
 
+## Evolved-Function Transfer Pruning
+
+With the full-size model file (referred as `trained_ResNet_ckpt.pkl` here) saved from the above training from scratch experiment, we can perform transfer pruning by:
+
+```
+python3 model_pruning.py \
+	--model=trained_ResNet_ckpt.pkl
+```
+
+The hyper-parameter setting of this experiment is fully specified in the file of [ResNet_hyperparams_pruning.py](./ResNet_hyperparams_pruning.py). 
+By default, we use the evolved function in `Equation 3` of the main paper as the channel pruning criteria. 
+
