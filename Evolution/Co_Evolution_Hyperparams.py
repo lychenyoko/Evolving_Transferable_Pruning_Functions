@@ -10,7 +10,7 @@ EVALUATION_TIME_LIMIT = 21600 # unit in second, equal to 6 hours
 num_per_func = 2
 gen_num = 10
 init_pop_loaded = False 
-init_pop = 'Saved_Generation/pop_of_Co_Evolve_15_gen_20_ind_2019-12-20_12:30:39_gen_-1.pkl'
+init_pop = None
 
 # Mutation Hyperparams
 mutate_prob = 0.75
