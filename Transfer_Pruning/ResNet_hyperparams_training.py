@@ -8,7 +8,7 @@ DATASET_NAME = ['CIFAR10', 'CIFAR100']
 ### ------------------------------- Training Params -------------------------------
 
 # Network Structure and Dataset
-Dataset = DATASET_NAME[0]
+Dataset = DATASET_NAME[1]
 n_res_block = 9
 block_type = BLOCK_TYPE[0]
 
@@ -32,6 +32,6 @@ bn_var_epsilon = 1e-5
 
 
 # Loaded from other model
-model_loaded = True 
-model = './Model_ResNet56/ResNet56_2019-02-15_23:04:37_acc_94.11_new.npy'
+model_loaded = False 
+model = None
 

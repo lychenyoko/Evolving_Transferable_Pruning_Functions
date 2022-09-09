@@ -1,9 +1,14 @@
-# Conduct Hierarchical Pruning for ResNet on CIFAR dataset
+# Transfer Pruning with ResNet-56 on CIFAR-100
 
-## Working Environment
+In this folder, we use the evolved functions to prune ResNet-56 on CIFAR-100, which is a totally different task than what the functions are evolved on. 
 
-python==3.6.5
+## Training Full-Size Original Model from Scratch
 
-tensorflow==1.14.0
+Training a full-size ResNet-56 on CIFAR-100 can be conducted by:
 
-numpy==1.16.0
+```
+python3 model_training.py
+```
+
+This experiment is fully controlled by the hyper-parameters specified in the file [ResNet_hyperparams_training.py](./ResNet_hyperparams_training.py). 
+
