@@ -16,6 +16,6 @@ python3 Co_Evolution_Parallel.py
 ```
 
 Note the code is implemented on a [SLURM](https://slurm.schedmd.com/documentation.html) job server (Princeton TigerGPU) for generation-level parallelism. 
-The hyper-parameters for overall evolution process is specified by [Co_Evolution_Hyperparams.py]('./Co_Evolution_Hyperparams.py') 
-and the hyper-parameters for pruning evaluations are included in  [LeNet5_Eval_Hyperparams.py]('./LeNet5_Eval_Hyperparams.py') and [VGG16_Eval_Hyperparams.py]('./VGG16_Eval_Hyperparams.py').
+The hyper-parameters for overall evolution process is specified by [Co_Evolution_Hyperparams.py](./Co_Evolution_Hyperparams.py) 
+and the hyper-parameters for pruning evaluations are included in  [LeNet5_Eval_Hyperparams.py](./LeNet5_Eval_Hyperparams.py) and [VGG16_Eval_Hyperparams.py](./VGG16_Eval_Hyperparams.py).
 
